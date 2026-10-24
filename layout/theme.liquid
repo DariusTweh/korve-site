@@ -19,6 +19,7 @@
 
     {%- render 'meta-tags' -%}
     {%- render 'stylesheets' -%}
+    {{ 'korve.css' | asset_url | stylesheet_tag }}
     {%- render 'card-hover-effect-styles' -%}
     {%- render 'scripts' -%}
     {%- render 'theme-styles-variables' -%}
@@ -168,6 +169,8 @@
     {% render 'theme-drawer' %}
 
     {% render 'search-modal' %}
+
+    <script src="{{ 'korve.js' | asset_url }}" defer></script>
 
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}

@@ -1,0 +1,57 @@
+<section class="korve-section korve-lookbook">
+  <div class="korve-shell">
+    <header class="korve-lookbook__header" data-korve-reveal>
+      <p class="korve-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      <h2 class="korve-section-title">{{ section.settings.heading | escape }}</h2>
+    </header>
+    <div class="korve-lookbook__grid">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.image != blank -%}
+          <figure class="korve-lookbook__item korve-lookbook__item--{{ block.settings.size }}" {{ block.shopify_attributes }} data-korve-reveal>
+            {%- if block.settings.link != blank -%}<a href="{{ block.settings.link }}" aria-label="{{ block.settings.caption | default: section.settings.heading | escape }}">{%- endif -%}
+              {{ block.settings.image | image_url: width: 1600 | image_tag: widths: '480, 760, 1100, 1600', sizes: '(min-width: 990px) 50vw, 100vw', loading: 'lazy' }}
+            {%- if block.settings.link != blank -%}</a>{%- endif -%}
+            {%- if block.settings.caption != blank -%}<figcaption>{{ block.settings.caption | escape }}</figcaption>{%- endif -%}
+          </figure>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .korve-lookbook { padding-block: var(--korve-section-space); }
+  .korve-lookbook__header { display: grid; grid-template-columns: 1fr 2fr; align-items: end; margin-bottom: clamp(2.5rem, 6vw, 5rem); }
+  .korve-lookbook__grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(.75rem, 2vw, 2rem); align-items: start; }
+  .korve-lookbook__item { grid-column: span 5; margin: 0 0 clamp(2rem, 7vw, 7rem); }
+  .korve-lookbook__item:nth-child(even) { grid-column: 7 / span 6; margin-top: clamp(4rem, 10vw, 10rem); }
+  .korve-lookbook__item--wide { grid-column: 1 / -1; }
+  .korve-lookbook__item img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+  .korve-lookbook__item--wide img { aspect-ratio: 16 / 9; }
+  .korve-lookbook__item figcaption { padding-top: .8rem; font-size: .7rem; letter-spacing: .13em; text-transform: uppercase; }
+  @media screen and (max-width: 749px) {
+    .korve-lookbook__header { grid-template-columns: 1fr; gap: 1rem; }
+    .korve-lookbook__grid { grid-template-columns: 1fr; }
+    .korve-lookbook__item, .korve-lookbook__item:nth-child(even), .korve-lookbook__item--wide { grid-column: auto; margin: 0 0 2.5rem; }
+    .korve-lookbook__item--wide img { aspect-ratio: 4 / 5; }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "KORVE lookbook",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "CAMPAIGN 001" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "SEEN / FELT / WORN" }
+  ],
+  "blocks": [
+    { "type": "image", "name": "Lookbook image", "settings": [
+      { "type": "image_picker", "id": "image", "label": "Image" },
+      { "type": "text", "id": "caption", "label": "Caption" },
+      { "type": "url", "id": "link", "label": "Product or collection link" },
+      { "type": "select", "id": "size", "label": "Layout", "options": [{"value":"portrait","label":"Portrait"},{"value":"wide","label":"Wide"}], "default": "portrait" }
+    ] }
+  ],
+  "presets": [{ "name": "KORVE lookbook", "blocks": [{"type":"image"},{"type":"image"},{"type":"image"}] }]
+}
+{% endschema %}

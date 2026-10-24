@@ -1,1 +1,163 @@
-{"sections":{"section_Fh7TFQ":{"type":"section","blocks":{"logo_knJtLx":{"type":"logo","name":"t:names.logo","settings":{"inverse":false,"font":"heading","text_color":"","unit":"percent","percent_width":75,"pixel_height":48,"custom_mobile_size":false,"unit_mobile":"percent","percent_width_mobile":100,"pixel_height_mobile":120,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}}},"block_order":["logo_knJtLx"],"name":"t:names.section","settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"center","vertical_alignment_flex_direction_column":"flex-start","gap":73,"section_width":"page-width","section_height":"medium","section_height_custom":50,"background_media":"image","background_color":"{{ settings.color_palette.color1 }}","video_position":"cover","background_image":"shopify:\/\/shop_images\/44C3D188-64A4-4BDD-8958-BD53AC8E7C6D.png","background_image_position":"cover","toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","border":"none","border_width":1,"border_opacity":100,"border_color":"","border_radius":0,"padding-block-start":48,"padding-block-end":80}},"product_list_8kR3Hb":{"type":"product-list","blocks":{"static-header":{"type":"_product-list-content","name":"t:names.header","static":true,"settings":{"content_direction":"row","vertical_on_mobile":false,"horizontal_alignment":"space-between","vertical_alignment":"flex-end","align_baseline":true,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"center","gap":12,"width":"fill","custom_width":100,"width_mobile":"fill","custom_width_mobile":100,"height":"fit","custom_height":100,"background_media":"none","background_color":"","video_position":"cover","background_image_position":"cover","border":"none","border_width":1,"border_opacity":100,"border_color":"","border_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"product_list_text_jWLgBb":{"type":"_product-list-text","name":"t:names.collection_title","settings":{"text":"<h3>{{ closest.collection.title }} <\/h3>","width":"fit-content","max_width":"normal","alignment":"left","type_preset":"h2","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","text_color":"","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"collection_link_button_WJVkjn":{"type":"_product-list-button","name":"t:names.product_list_button","settings":{"label":"SHOP ALL","open_in_new_tab":false,"style_class":"button-unstyled","custom_button_background":"{{ settings.color_palette.foreground }}","custom_button_text":"{{ settings.color_palette.background }}","custom_button_border":"{{ settings.color_palette.background }}","link_text_color":"{{ settings.color_palette.color1 }}","width":"fit-content","custom_width":21,"width_mobile":"fit-content","custom_width_mobile":50},"blocks":{}}},"block_order":["product_list_text_jWLgBb","collection_link_button_WJVkjn"]},"static-product-card":{"type":"_product-card","name":"t:names.product_card","static":true,"settings":{"product_card_gap":8,"background_color":"","border":"none","border_width":1,"border_opacity":100,"border_color":"","border_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"product_card_gallery_qj3nbW":{"type":"_product-card-gallery","name":"t:names.product_card_media","settings":{"image_ratio":"portrait","border":"none","border_width":1,"border_opacity":100,"border_color":"","border_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"group_UydKWg":{"type":"_product-card-group","settings":{"content_direction":"column","vertical_on_mobile":false,"horizontal_alignment":"space-between","vertical_alignment":"flex-start","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"flex-start","gap":4,"width":"fill","custom_width":35,"width_mobile":"fill","custom_width_mobile":43,"height":"fit","custom_height":100,"background_media":"none","background_color":"","video_position":"cover","background_image_position":"cover","toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","border":"none","border_width":1,"border_opacity":100,"border_color":"","border_radius":0,"link":"","open_in_new_tab":false,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"group_E8xhK7":{"type":"_product-card-group","name":"t:names.group","settings":{"content_direction":"column","vertical_on_mobile":true,"horizontal_alignment":"flex-start","vertical_alignment":"center","align_baseline":false,"horizontal_alignment_flex_direction_column":"flex-start","vertical_alignment_flex_direction_column":"flex-start","gap":4,"width":"fill","custom_width":40,"width_mobile":"fit-content","custom_width_mobile":20,"height":"fit","custom_height":100,"background_media":"none","background_color":"","video_position":"cover","background_image_position":"cover","toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","border":"none","border_width":1,"border_opacity":100,"border_color":"","border_radius":0,"link":"","open_in_new_tab":false,"padding-block-start":8,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{"product_title_nKpHR3":{"type":"product-title","name":"t:names.product_title","settings":{"width":"fit-content","max_width":"normal","alignment":"left","type_preset":"h5","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","text_color":"","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"price_MEV7Py":{"type":"price","settings":{"show_sale_price_first":true,"show_installments":false,"show_tax_info":false,"type_preset":"h6","width":"100%","alignment":"left","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","text_color":"","padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}}},"block_order":["product_title_nKpHR3","price_MEV7Py"]},"swatches_dkNy8U":{"type":"swatches","settings":{"product_swatches_alignment":"flex-start","product_swatches_alignment_mobile":"flex-start","hide_padding":false,"product_swatches_padding_top":4,"product_swatches_padding_bottom":10,"product_swatches_padding_left":0,"product_swatches_padding_right":0},"blocks":{}}},"block_order":["group_E8xhK7","swatches_dkNy8U"]}},"block_order":["product_card_gallery_qj3nbW","group_UydKWg"]}},"name":"t:names.product_list","settings":{"collection":"all","layout_type":"grid","carousel_on_mobile":false,"max_products":4,"columns":4,"mobile_columns":"2","mobile_card_size":"60cqw","columns_gap":12,"rows_gap":36,"icons_style":"arrow","icons_shape":"none","section_width":"page-width","horizontal_alignment":"flex-start","gap":24,"background_color":"#bebaba","padding-block-start":45,"padding-block-end":18}},"collection_list_iAQiBH":{"type":"collection-list","blocks":{"static-collection-card":{"type":"_collection-card","name":"t:names.collection_card","static":true,"settings":{"placement":"on_image","horizontal_alignment":"flex-start","vertical_alignment":"flex-start","collection_card_gap":8,"background_color":"","border":"none","border_width":1,"border_opacity":100,"border_color":"","border_radius":0},"blocks":{"collection_title_RHWy4T":{"type":"collection-title","name":"t:names.collection_title","settings":{"width":"fit-content","max_width":"normal","alignment":"left","type_preset":"h5","font":"var(--font-body--family)","font_size":"1rem","line_height":"normal","letter_spacing":"normal","case":"none","wrap":"pretty","background":false,"background_color":"#00000026","text_color":"{{ settings.color_palette.foreground }}","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}},"collection-card-image":{"type":"_collection-card-image","name":"t:names.collection_card_image","static":true,"settings":{"image_ratio":"portrait","toggle_overlay":false,"overlay_color":"#00000026","overlay_style":"solid","gradient_direction":"to top","border":"none","border_width":1,"border_opacity":100,"border_color":"","border_radius":0},"blocks":{}}},"block_order":["collection_title_RHWy4T"]}},"name":"t:names.collections_carousel","settings":{"collection_list":[],"layout_type":"carousel","carousel_on_mobile":false,"columns":3,"mobile_columns":"2","mobile_card_size":"60cqw","columns_gap":0,"bento_gap":8,"rows_gap":8,"max_collections":4,"icons_style":"arrow","icons_shape":"none","section_width":"full-width","gap":12,"background_color":"{{ settings.color_palette.background }}","padding-block-start":24,"padding-block-end":0}},"marquee_9AMajF":{"type":"marquee","blocks":{"text_RGxHtE":{"type":"text","settings":{"text":"<h1><a href=\"\/collections\/all\" title=\"All products\">SHOP NOW <\/a><\/h1>","width":"100%","max_width":"normal","alignment":"left","type_preset":"h1","font":"var(--font-body--family)","font_size":"1rem","line_height":"tight","letter_spacing":"tight","case":"none","wrap":"nowrap","text_color":"","background":false,"background_color":"#00000026","corner_radius":0,"padding-block-start":0,"padding-block-end":0,"padding-inline-start":0,"padding-inline-end":0},"blocks":{}}},"block_order":["text_RGxHtE"],"name":"t:names.marquee_section","settings":{"movement_direction":"normal","background_color":"{{ settings.color_palette.color2 }}","padding-block-start":48,"padding-block-end":48,"gap_between_elements":100}}},"order":["section_Fh7TFQ","product_list_8kR3Hb","collection_list_iAQiBH","marquee_9AMajF"]}
+{
+  "sections": {
+    "hero": {
+      "type": "korve-hero",
+      "settings": {
+        "image": "shopify://shop_images/44C3D188-64A4-4BDD-8958-BD53AC8E7C6D.png",
+        "eyebrow": "KORVE / NEW SEASON",
+        "heading": "NOT MADE TO BLEND IN.",
+        "text": "<p>Original pieces. Effortless confidence. Everyday expression.</p>",
+        "button_label": "SHOP KORVE",
+        "button_link": "shopify://collections/all",
+        "content_position": "start",
+        "overlay_opacity": 25,
+        "animate": true
+      }
+    },
+    "categories": {
+      "type": "korve-category-grid",
+      "blocks": {
+        "category_1": { "type": "category", "settings": {} },
+        "category_2": { "type": "category", "settings": {} },
+        "category_3": { "type": "category", "settings": {} }
+      },
+      "block_order": ["category_1", "category_2", "category_3"],
+      "settings": {
+        "eyebrow": "SHOP BY CATEGORY",
+        "heading": "FIND YOUR UNIFORM.",
+        "link_label": "VIEW ALL",
+        "link": "shopify://collections/all"
+      }
+    },
+    "featured": {
+      "type": "product-list",
+      "blocks": {
+        "static-header": {
+          "type": "_product-list-content",
+          "static": true,
+          "settings": {
+            "content_direction": "row", "vertical_on_mobile": true, "horizontal_alignment": "space-between", "vertical_alignment": "flex-end", "align_baseline": true,
+            "horizontal_alignment_flex_direction_column": "flex-start", "vertical_alignment_flex_direction_column": "center", "gap": 16,
+            "width": "fill", "custom_width": 100, "width_mobile": "fill", "custom_width_mobile": 100, "height": "fit", "custom_height": 100,
+            "background_media": "none", "background_color": "", "video_position": "cover", "background_image_position": "cover",
+            "border": "none", "border_width": 1, "border_opacity": 100, "border_color": "", "border_radius": 0,
+            "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
+          },
+          "blocks": {
+            "heading": {
+              "type": "_product-list-text",
+              "settings": {
+                "text": "<h2>THE KORVE EDIT</h2>", "width": "fit-content", "max_width": "normal", "alignment": "left", "type_preset": "h2",
+                "font": "var(--font-heading--family)", "font_size": "1rem", "line_height": "tight", "letter_spacing": "tight", "case": "uppercase", "wrap": "pretty",
+                "text_color": "", "background": false, "background_color": "#00000026", "corner_radius": 0,
+                "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "button": {
+              "type": "_product-list-button",
+              "settings": {
+                "label": "SHOP ALL", "open_in_new_tab": false, "style_class": "button-unstyled",
+                "custom_button_background": "{{ settings.color_palette.foreground }}", "custom_button_text": "{{ settings.color_palette.background }}", "custom_button_border": "{{ settings.color_palette.background }}",
+                "link_text_color": "", "width": "fit-content", "custom_width": 20, "width_mobile": "fit-content", "custom_width_mobile": 50
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": ["heading", "button"]
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 10, "background_color": "", "border": "none", "border_width": 1, "border_opacity": 100, "border_color": "", "border_radius": 0,
+            "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
+          },
+          "blocks": {
+            "gallery": {
+              "type": "_product-card-gallery",
+              "settings": {
+                "image_ratio": "portrait", "border": "none", "border_width": 1, "border_opacity": 100, "border_color": "", "border_radius": 0,
+                "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "info": {
+              "type": "_product-card-group",
+              "settings": {
+                "content_direction": "column", "vertical_on_mobile": true, "horizontal_alignment": "flex-start", "vertical_alignment": "flex-start", "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start", "vertical_alignment_flex_direction_column": "flex-start", "gap": 5,
+                "width": "fill", "custom_width": 100, "width_mobile": "fill", "custom_width_mobile": 100, "height": "fit", "custom_height": 100,
+                "background_media": "none", "background_color": "", "video_position": "cover", "background_image_position": "cover", "toggle_overlay": false,
+                "overlay_color": "#00000026", "overlay_style": "solid", "gradient_direction": "to top", "border": "none", "border_width": 1, "border_opacity": 100,
+                "border_color": "", "border_radius": 0, "link": "", "open_in_new_tab": false,
+                "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
+              },
+              "blocks": {
+                "title": {
+                  "type": "product-title",
+                  "settings": {
+                    "width": "fit-content", "max_width": "normal", "alignment": "left", "type_preset": "h5", "font": "var(--font-body--family)", "font_size": "1rem",
+                    "line_height": "normal", "letter_spacing": "normal", "case": "none", "wrap": "pretty", "text_color": "", "background": false,
+                    "background_color": "#00000026", "corner_radius": 0, "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "price": {
+                  "type": "price",
+                  "settings": {
+                    "show_sale_price_first": true, "show_installments": false, "show_tax_info": false, "type_preset": "paragraph", "width": "100%", "alignment": "left",
+                    "font": "var(--font-body--family)", "font_size": "1rem", "line_height": "normal", "letter_spacing": "normal", "case": "none", "text_color": "",
+                    "padding-block-start": 0, "padding-block-end": 0, "padding-inline-start": 0, "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "swatches": {
+                  "type": "swatches",
+                  "settings": {
+                    "product_swatches_alignment": "flex-start", "product_swatches_alignment_mobile": "flex-start", "hide_padding": false,
+                    "product_swatches_padding_top": 4, "product_swatches_padding_bottom": 8, "product_swatches_padding_left": 0, "product_swatches_padding_right": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": ["title", "price", "swatches"]
+            }
+          },
+          "block_order": ["gallery", "info"]
+        }
+      },
+      "settings": {
+        "collection": "all", "layout_type": "grid", "carousel_on_mobile": false, "max_products": 8, "columns": 4, "mobile_columns": "2", "mobile_card_size": "44cqw",
+        "columns_gap": 16, "rows_gap": 40, "icons_style": "arrow", "icons_shape": "none", "section_width": "page-width", "horizontal_alignment": "flex-start",
+        "gap": 32, "background_color": "#F5F1E9", "padding-block-start": 72, "padding-block-end": 96
+      }
+    },
+    "statement": {
+      "type": "korve-brand-statement",
+      "settings": {
+        "image_position": "left", "eyebrow": "THE KORVE POINT OF VIEW",
+        "statement": "<p>Style isn't about fitting in. It's about showing up exactly as you are.</p>", "link_label": "OUR STORY"
+      }
+    },
+    "lookbook": {
+      "type": "korve-lookbook",
+      "blocks": {
+        "image_1": { "type": "image", "settings": { "size": "portrait" } },
+        "image_2": { "type": "image", "settings": { "size": "portrait" } },
+        "image_3": { "type": "image", "settings": { "size": "wide" } }
+      },
+      "block_order": ["image_1", "image_2", "image_3"],
+      "settings": { "eyebrow": "CAMPAIGN 001", "heading": "SEEN / FELT / WORN" }
+    },
+    "newsletter": {
+      "type": "korve-newsletter",
+      "settings": {
+        "eyebrow": "STAY IN THE KNOW", "heading": "FIRST LOOK. NO NOISE.",
+        "text": "<p>New releases, campaign stories, and the occasional note from KORVE.</p>",
+        "consent": "<p>By subscribing, you agree to receive marketing email. Unsubscribe at any time.</p>"
+      }
+    }
+  },
+  "order": ["hero", "categories", "featured", "statement", "lookbook", "newsletter"]
+}

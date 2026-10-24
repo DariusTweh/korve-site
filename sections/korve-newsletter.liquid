@@ -1,0 +1,52 @@
+<section class="korve-newsletter" data-korve-reveal>
+  <div class="korve-newsletter__inner">
+    <div>
+      {%- if section.settings.eyebrow != blank -%}<p class="korve-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+      <h2>{{ section.settings.heading | escape }}</h2>
+      {%- if section.settings.text != blank -%}<div class="korve-newsletter__text">{{ section.settings.text }}</div>{%- endif -%}
+    </div>
+    <div>
+      {%- form 'customer', class: 'korve-newsletter__form' -%}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <label class="visually-hidden" for="KorveNewsletter-{{ section.id }}">Email address</label>
+        <div class="korve-newsletter__field">
+          <input id="KorveNewsletter-{{ section.id }}" type="email" name="contact[email]" value="{{ form.email }}" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="EMAIL ADDRESS" required {% if form.errors %}aria-invalid="true" aria-describedby="KorveNewsletterError-{{ section.id }}"{% endif %}>
+          <button type="submit" aria-label="Subscribe">JOIN <span aria-hidden="true">→</span></button>
+        </div>
+        {%- if form.errors -%}<p id="KorveNewsletterError-{{ section.id }}" class="korve-newsletter__message" role="alert">{{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}</p>{%- endif -%}
+        {%- if form.posted_successfully? -%}<p class="korve-newsletter__message" role="status">You're on the list. Thank you.</p>{%- endif -%}
+      {%- endform -%}
+      {%- if section.settings.consent != blank -%}<div class="korve-newsletter__consent">{{ section.settings.consent }}</div>{%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .korve-newsletter { padding: var(--korve-section-space) var(--korve-page-gutter); background: var(--korve-yellow); color: var(--korve-black); }
+  .korve-newsletter__inner { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(22rem, .85fr); align-items: end; gap: clamp(3rem, 9vw, 10rem); width: min(100%, 1500px); margin-inline: auto; }
+  .korve-newsletter h2 { max-width: 9ch; margin: 1rem 0; font-size: var(--korve-heading); line-height: .9; letter-spacing: -.055em; }
+  .korve-newsletter__text { max-width: 36rem; font-size: 1.05rem; }
+  .korve-newsletter__field { display: flex; border-block-end: 2px solid currentColor; }
+  .korve-newsletter__field input { width: 100%; padding: 1rem 0; border: 0; outline: 0; background: transparent; color: inherit; font: inherit; }
+  .korve-newsletter__field input::placeholder { color: inherit; opacity: .75; }
+  .korve-newsletter__field button { flex: 0 0 auto; padding: 1rem 0 1rem 1.5rem; border: 0; background: transparent; color: inherit; font-size: .75rem; font-weight: 700; letter-spacing: .12em; }
+  .korve-newsletter__message, .korve-newsletter__consent { margin: .8rem 0 0; font-size: .75rem; line-height: 1.5; }
+  .korve-newsletter__consent { max-width: 38rem; opacity: .75; }
+  .korve-newsletter__consent p { margin: 0; }
+  @media screen and (max-width: 749px) {
+    .korve-newsletter__inner { grid-template-columns: 1fr; }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "KORVE newsletter",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "STAY IN THE KNOW" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "FIRST LOOK. NO NOISE." },
+    { "type": "richtext", "id": "text", "label": "Description", "default": "<p>New releases, campaign stories, and the occasional note from KORVE.</p>" },
+    { "type": "richtext", "id": "consent", "label": "Consent message", "default": "<p>By subscribing, you agree to receive marketing email. Unsubscribe at any time.</p>" }
+  ],
+  "presets": [{ "name": "KORVE newsletter" }]
+}
+{% endschema %}

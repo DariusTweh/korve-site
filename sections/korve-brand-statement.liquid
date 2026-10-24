@@ -1,0 +1,47 @@
+<section class="korve-statement korve-section{% if section.settings.image_position == 'right' %} korve-statement--reverse{% endif %}">
+  <div class="korve-statement__media" data-korve-reveal>
+    {%- if section.settings.image != blank -%}
+      {{ section.settings.image | image_url: width: 1800 | image_tag: widths: '640, 960, 1400, 1800', sizes: '(min-width: 750px) 55vw, 100vw', loading: 'lazy' }}
+    {%- else -%}
+      {{ 'lifestyle-2' | placeholder_svg_tag }}
+    {%- endif -%}
+  </div>
+  <div class="korve-statement__content" data-korve-reveal>
+    {%- if section.settings.eyebrow != blank -%}<p class="korve-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+    <div class="korve-statement__quote">{{ section.settings.statement }}</div>
+    {%- if section.settings.text != blank -%}<div class="korve-copy">{{ section.settings.text }}</div>{%- endif -%}
+    {%- if section.settings.link_label != blank and section.settings.link != blank -%}<a class="korve-link" href="{{ section.settings.link }}">{{ section.settings.link_label | escape }}</a>{%- endif -%}
+  </div>
+</section>
+
+{% stylesheet %}
+  .korve-statement { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(22rem, .9fr); min-height: min(860px, 85svh); background: var(--korve-chocolate); color: var(--korve-ivory); }
+  .korve-statement--reverse .korve-statement__media { order: 2; }
+  .korve-statement__media img, .korve-statement__media svg { width: 100%; height: 100%; min-height: 36rem; object-fit: cover; }
+  .korve-statement__content { display: flex; flex-direction: column; justify-content: center; padding: clamp(3rem, 7vw, 8rem); }
+  .korve-statement__quote { max-width: 14ch; margin: 1.5rem 0 2rem; font-size: clamp(2.25rem, 4.8vw, 5rem); font-weight: 500; letter-spacing: -.055em; line-height: .98; }
+  .korve-statement__quote p { margin: 0; }
+  .korve-statement__content .korve-copy { max-width: 32rem; margin-bottom: 2rem; }
+  @media screen and (max-width: 749px) {
+    .korve-statement { grid-template-columns: 1fr; min-height: 0; }
+    .korve-statement--reverse .korve-statement__media { order: 0; }
+    .korve-statement__media img, .korve-statement__media svg { min-height: 68svh; }
+    .korve-statement__content { padding: 4rem var(--korve-page-gutter); }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "KORVE brand statement",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Campaign image" },
+    { "type": "select", "id": "image_position", "label": "Image position", "options": [{"value":"left","label":"Left"},{"value":"right","label":"Right"}], "default": "left" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "THE KORVE POINT OF VIEW" },
+    { "type": "richtext", "id": "statement", "label": "Statement", "default": "<p>Style isn't about fitting in. It's about showing up exactly as you are.</p>" },
+    { "type": "richtext", "id": "text", "label": "Supporting text" },
+    { "type": "text", "id": "link_label", "label": "Link label", "default": "OUR STORY" },
+    { "type": "url", "id": "link", "label": "Link" }
+  ],
+  "presets": [{ "name": "KORVE brand statement" }]
+}
+{% endschema %}
