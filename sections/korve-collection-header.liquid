@@ -1,0 +1,39 @@
+{%- assign banner_image = section.settings.image | default: collection.image -%}
+<header class="korve-collection-hero{% if banner_image != blank %} korve-collection-hero--image{% endif %}">
+  {%- if banner_image != blank -%}
+    <div class="korve-collection-hero__media">
+      {{ banner_image | image_url: width: 2400 | image_tag: widths: '750, 1200, 1800, 2400', sizes: '100vw', loading: 'eager', fetchpriority: 'high' }}
+    </div>
+  {%- endif -%}
+  <div class="korve-collection-hero__content" data-korve-reveal>
+    {%- if section.settings.eyebrow != blank -%}<p class="korve-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+    <h1>{{ collection.title | escape }}</h1>
+    {%- if section.settings.show_description and collection.description != blank -%}
+      <div class="korve-collection-hero__description">{{ collection.description }}</div>
+    {%- endif -%}
+  </div>
+</header>
+
+{% stylesheet %}
+  .korve-collection-hero { position: relative; display: grid; min-height: clamp(20rem, 40vw, 38rem); background: var(--korve-gray); color: var(--korve-black); overflow: hidden; }
+  .korve-collection-hero--image { min-height: clamp(30rem, 58vw, 52rem); color: #fff; }
+  .korve-collection-hero__media, .korve-collection-hero__content { grid-area: 1 / 1; }
+  .korve-collection-hero__media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgb(0 0 0 / .55), transparent 65%); }
+  .korve-collection-hero__media img { width: 100%; height: 100%; object-fit: cover; }
+  .korve-collection-hero__content { z-index: 1; align-self: end; width: min(100%, 1600px); margin-inline: auto; padding: clamp(3rem, 7vw, 7rem) var(--korve-page-gutter); }
+  .korve-collection-hero h1 { max-width: 12ch; margin: .8rem 0 0; color: inherit; font-size: var(--korve-display); font-weight: 600; letter-spacing: -.06em; line-height: .87; }
+  .korve-collection-hero__description { max-width: 42rem; margin-top: 1.5rem; font-size: clamp(1rem, 1.5vw, 1.2rem); line-height: 1.5; }
+  .korve-collection-hero__description p { margin: 0; }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "KORVE collection header",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Custom banner image", "info": "Uses the collection image when blank." },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "KORVE / COLLECTION" },
+    { "type": "checkbox", "id": "show_description", "label": "Show collection description", "default": true }
+  ],
+  "presets": [{ "name": "KORVE collection header" }]
+}
+{% endschema %}

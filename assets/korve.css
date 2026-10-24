@@ -36,10 +36,16 @@ body { background: var(--korve-ivory); color: var(--korve-black); }
 .product-card:hover .product-card__content { transform: translateY(-.2rem); }
 .product-card h3, .product-card h4, .product-card h5 { letter-spacing: -.02em; }
 .main-collection-grid { padding-inline: var(--korve-page-gutter); }
+.main-collection-grid .product-grid { row-gap: clamp(2rem, 5vw, 4.5rem); }
+.facets__form, .facets__summary { text-transform: uppercase; letter-spacing: .08em; }
 .product-information__grid { background: var(--korve-ivory); }
 .product-information__grid .product-details { padding-inline: clamp(1rem, 4vw, 5rem); }
+.product-information__grid .product-details h1 { font-size: clamp(2.2rem, 4vw, 4.5rem); letter-spacing: -.055em; line-height: .95; }
+.product-information__grid media-gallery { background: var(--korve-gray); }
 .variant-option__button-label, .button, button { border-radius: 0; }
 .theme-drawer__dialog { background: var(--korve-ivory); }
+.theme-drawer__title { font-size: clamp(1.7rem, 4vw, 2.6rem); letter-spacing: -.04em; }
+.cart-drawer__inner { color: var(--korve-black); }
 .cart-drawer__summary { border-block-start: 1px solid color-mix(in srgb, var(--korve-black) 18%, transparent); }
 .footer { border-block-start: 1px solid color-mix(in srgb, var(--korve-black) 18%, transparent); }
 
