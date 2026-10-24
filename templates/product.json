@@ -192,23 +192,10 @@
                         "padding-inline-end": 0
                       },
                       "blocks": {}
-                    },
-                    "review_QhdEwM": {
-                      "type": "review",
-                      "settings": {
-                        "stars_style": "shaded",
-                        "show_number": true,
-                        "text_color": "",
-                        "type_preset": "paragraph",
-                        "width": "100%",
-                        "alignment": "left"
-                      },
-                      "blocks": {}
                     }
                   },
                   "block_order": [
-                    "price_97GqNF",
-                    "review_QhdEwM"
+                    "price_97GqNF"
                   ]
                 }
               },
@@ -342,7 +329,7 @@
               "type": "disclosures",
               "name": "t:names.disclosures",
               "settings": {
-                "heading": "Disclosures",
+                "heading": "Product details",
                 "heading_preset": "h5",
                 "open_by_default": false,
                 "icon": "caret",
@@ -387,7 +374,7 @@
           "type": "text",
           "name": "t:names.header",
           "settings": {
-            "text": "<h3>Goes well with...</h3>",
+            "text": "<h3>YOU MAY ALSO LIKE</h3>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
