@@ -32,6 +32,13 @@ body { background: var(--korve-ivory); color: var(--korve-black); }
 .header { letter-spacing: .08em; }
 .header__heading-logo, .header-logo__image { max-height: 2rem; }
 .menu-list__link { font-size: .75rem; font-weight: 600; text-transform: uppercase; }
+@media screen and (min-width: 990px) {
+  #header-component[transparent]:not([data-sticky-state='active']):not(:hover):not(:focus-within) .header__column--right {
+    --color-foreground: #fff;
+    --color-foreground-rgb: 255 255 255;
+    color: #fff;
+  }
+}
 .product-card__content { transition: transform .45s var(--korve-ease); }
 .product-card:hover .product-card__content { transform: translateY(-.2rem); }
 .product-card h3, .product-card h4, .product-card h5 { letter-spacing: -.02em; }

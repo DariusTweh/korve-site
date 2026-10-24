@@ -13,37 +13,59 @@
         {{ desktop_image | image_url: width: 2400 | image_tag: widths: '960, 1440, 1920, 2400', sizes: '100vw', loading: 'eager', fetchpriority: 'high', class: 'korve-hero__image' }}
       </picture>
     {%- else -%}
-      {{ 'lifestyle-1' | placeholder_svg_tag: 'korve-hero__placeholder' }}
+      <picture>
+        <source media="(max-width: 749px)" srcset="{{ 'korve-hero-mobile.png' | asset_url }}">
+        <img class="korve-hero__image" src="{{ 'korve-hero-desktop.png' | asset_url }}" width="1672" height="941" alt="KORVE campaign featuring the black and ivory statement set" fetchpriority="high">
+      </picture>
     {%- endif -%}
   </div>
   <div class="korve-hero__shade" aria-hidden="true"></div>
   <div class="korve-hero__content"{% if section.settings.animate %} data-korve-reveal{% endif %}>
     {%- if section.settings.eyebrow != blank -%}<p class="korve-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
-    {%- if section.settings.heading != blank -%}<h1>{{ section.settings.heading | escape }}</h1>{%- endif -%}
+    {%- if section.settings.heading != blank -%}<h1>{{ section.settings.heading | escape }}<span class="korve-hero__dot" aria-hidden="true"></span></h1>{%- endif -%}
     {%- if section.settings.text != blank -%}<div class="korve-hero__text">{{ section.settings.text }}</div>{%- endif -%}
     {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
-      <a class="korve-hero__button" href="{{ section.settings.button_link }}">{{ section.settings.button_label | escape }}</a>
+      <a class="korve-hero__button" href="{{ section.settings.button_link }}"><span>{{ section.settings.button_label | escape }}</span><span class="korve-hero__arrow" aria-hidden="true">→</span></a>
     {%- endif -%}
   </div>
+  {%- if section.settings.show_signature -%}
+    <aside class="korve-hero__signature" aria-label="KORVE categories">
+      <strong>{{ section.settings.signature_heading | escape }}</strong>
+      <span aria-hidden="true"></span>
+      <p>{{ section.settings.signature_lines | escape | newline_to_br }}</p>
+    </aside>
+  {%- endif -%}
 </section>
 
 {% stylesheet %}
-  .korve-hero { min-height: min(920px, calc(100svh - 2rem)); position: relative; display: grid; overflow: hidden; color: #fff; background: #111; }
-  .korve-hero__media, .korve-hero__shade, .korve-hero__content { grid-area: 1 / 1; }
+  .korve-hero { min-height: max(46rem, calc(100svh - 2rem)); position: relative; display: grid; overflow: hidden; color: var(--korve-black); background: #d8cabb; }
+  .korve-hero__media, .korve-hero__shade, .korve-hero__content, .korve-hero__signature { grid-area: 1 / 1; }
   .korve-hero__media, .korve-hero__media picture { width: 100%; height: 100%; }
   .korve-hero__image, .korve-hero__placeholder { width: 100%; height: 100%; object-fit: cover; }
-  .korve-hero__shade { z-index: 1; background: linear-gradient(90deg, rgb(0 0 0 / calc(var(--hero-overlay) + .14)), rgb(0 0 0 / calc(var(--hero-overlay) * .45))); }
-  .korve-hero__content { z-index: 2; align-self: end; justify-self: var(--hero-position); width: min(100%, 1600px); padding: clamp(7rem, 16vh, 11rem) var(--korve-page-gutter) clamp(3rem, 7vw, 6rem); }
-  .korve-hero__content h1 { max-width: 9ch; margin: .4rem 0 1.4rem; color: inherit; font-size: var(--korve-display); font-weight: 650; letter-spacing: -.065em; line-height: .84; text-wrap: balance; }
-  .korve-hero__text { max-width: 34rem; font-size: clamp(1rem, 1.5vw, 1.25rem); line-height: 1.45; }
+  .korve-hero__shade { z-index: 1; pointer-events: none; background: linear-gradient(90deg, rgb(245 241 233 / var(--hero-overlay)), transparent 44%); }
+  .korve-hero__content { z-index: 2; align-self: center; justify-self: var(--hero-position); width: min(100%, 1680px); padding: clamp(8rem, 14vh, 10rem) var(--korve-page-gutter) 3rem; }
+  .korve-hero__content .korve-eyebrow { display: none; }
+  .korve-hero__content h1 { max-width: 6.2ch; margin: 0 0 1rem; color: inherit; font-size: clamp(4.4rem, 6.3vw, 7.25rem); font-weight: 800; letter-spacing: -.075em; line-height: .84; text-wrap: balance; text-transform: uppercase; }
+  .korve-hero__dot { display: inline-block; width: .22em; height: .22em; margin-left: .08em; border-radius: 50%; background: var(--korve-yellow); transform: translateY(-.05em); }
+  .korve-hero__text { max-width: 32rem; font-size: clamp(1.1rem, 1.45vw, 1.5rem); line-height: 1.35; }
   .korve-hero__text p { margin: 0; }
-  .korve-hero__button { display: inline-flex; margin-top: 2rem; min-height: 3.25rem; padding: .9rem 1.5rem; align-items: center; background: var(--korve-yellow); color: var(--korve-black); font-size: .75rem; font-weight: 700; letter-spacing: .14em; text-decoration: none; text-transform: uppercase; transition: background .25s ease, color .25s ease; }
+  .korve-hero__button { display: inline-flex; margin-top: 2.4rem; min-height: 3.5rem; padding: .9rem 1.5rem; align-items: center; justify-content: space-between; gap: 1.6rem; background: var(--korve-yellow); color: var(--korve-black); font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-decoration: none; text-transform: uppercase; transition: background .25s ease, color .25s ease; }
+  .korve-hero__arrow { font-size: 1.5rem; font-weight: 400; line-height: 0; transition: transform .3s var(--korve-ease); }
+  .korve-hero__button:hover .korve-hero__arrow { transform: translateX(.25rem); }
   .korve-hero__button:hover { background: #fff; }
+  .korve-hero__signature { z-index: 2; align-self: center; justify-self: end; width: 9rem; margin: 4rem clamp(2rem, 4vw, 4.5rem) 0 0; color: var(--korve-black); }
+  .korve-hero__signature strong { display: block; font-size: 1.1rem; letter-spacing: .02em; text-transform: uppercase; }
+  .korve-hero__signature > span { display: block; width: 1.6rem; height: 2px; margin: 1.2rem 0; background: var(--korve-yellow); }
+  .korve-hero__signature p { margin: 0; font-size: .68rem; letter-spacing: .2em; line-height: 1.85; text-transform: uppercase; }
   @media screen and (max-width: 749px) {
-    .korve-hero { min-height: 76svh; }
-    .korve-hero__shade { background: linear-gradient(0deg, rgb(0 0 0 / .58), rgb(0 0 0 / .05) 65%); }
-    .korve-hero__content { padding-bottom: 2rem; }
-    .korve-hero__content h1 { max-width: 8ch; font-size: clamp(3.5rem, 17vw, 5.5rem); }
+    .korve-hero { min-height: max(44rem, calc(100svh - 2rem)); }
+    .korve-hero__image { object-position: center center; }
+    .korve-hero__shade { background: linear-gradient(180deg, rgb(245 241 233 / .18), transparent 50%); }
+    .korve-hero__content { align-self: start; padding-top: clamp(7.5rem, 16vh, 10rem); }
+    .korve-hero__content h1 { max-width: 7ch; font-size: clamp(3.15rem, 13vw, 4.65rem); }
+    .korve-hero__text { max-width: 20rem; font-size: 1rem; }
+    .korve-hero__button { margin-top: 1.5rem; min-height: 3.1rem; }
+    .korve-hero__signature { display: none; }
   }
 {% endstylesheet %}
 
@@ -62,6 +84,9 @@
     { "type": "url", "id": "button_link", "label": "Button link" },
     { "type": "select", "id": "content_position", "label": "Content alignment", "options": [{"value":"start","label":"Left"},{"value":"center","label":"Center"}], "default": "start" },
     { "type": "range", "id": "overlay_opacity", "label": "Overlay opacity", "min": 0, "max": 70, "step": 5, "unit": "%", "default": 25 },
+    { "type": "checkbox", "id": "show_signature", "label": "Show category signature", "default": true },
+    { "type": "text", "id": "signature_heading", "label": "Signature heading", "default": "KORVÉ" },
+    { "type": "textarea", "id": "signature_lines", "label": "Signature lines", "default": "CLOTHING\nLOUNGEWEAR\nSTREETWEAR\nORIGINALS" },
     { "type": "checkbox", "id": "animate", "label": "Animate content on reveal", "default": true }
   ],
   "presets": [{ "name": "KORVE editorial hero" }]

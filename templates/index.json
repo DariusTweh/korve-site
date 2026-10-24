@@ -3,14 +3,16 @@
     "hero": {
       "type": "korve-hero",
       "settings": {
-        "image": "shopify://shop_images/44C3D188-64A4-4BDD-8958-BD53AC8E7C6D.png",
         "eyebrow": "KORVE / NEW SEASON",
         "heading": "NOT MADE TO BLEND IN.",
         "text": "<p>Original pieces. Effortless confidence. Everyday expression.</p>",
         "button_label": "SHOP KORVE",
         "button_link": "shopify://collections/all",
         "content_position": "start",
-        "overlay_opacity": 25,
+        "overlay_opacity": 0,
+        "show_signature": true,
+        "signature_heading": "KORVÉ",
+        "signature_lines": "CLOTHING\nLOUNGEWEAR\nSTREETWEAR\nORIGINALS",
         "animate": true
       }
     },
